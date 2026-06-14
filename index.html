@@ -150,7 +150,7 @@
   .logo{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:clamp(18px,4.5vw,20px);color:var(--morado);letter-spacing:-.03em;text-decoration:none}
   .logo span{color:var(--tinta);font-weight:500;font-size:13px}
   .hook-ico{width:18px;height:33px;color:var(--morado);flex-shrink:0}
-  .nav-cta{background:var(--morado);color:#fff;padding:11px 20px;border-radius:var(--r-full);font-weight:600;font-size:14px;text-decoration:none;transition:background .2s,transform .2s;min-height:44px;display:inline-flex;align-items:center}
+  .nav-cta{background:var(--morado);color:#fff;padding:10px 18px;border-radius:9px;font-weight:600;font-size:14px;text-decoration:none;transition:background .2s,transform .2s;min-height:42px;display:inline-flex;align-items:center}
   .nav-cta:hover{background:var(--morado-osc);transform:translateY(-1px)}
   @media(max-width:420px){.nav-cta{padding:10px 16px;font-size:13px}}
 
@@ -165,11 +165,11 @@
   .hero h1 .hl{color:var(--morado)}
   .hero p.sub{font-size:clamp(16px,2.2vw,20px);color:var(--gris);max-width:540px;margin:0 0 30px}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-  .btn{padding:15px 30px;border-radius:var(--r-full);font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s,background .2s,border-color .2s;display:inline-flex;align-items:center;justify-content:center;min-height:52px}
-  .btn-primary{background:var(--morado);color:#fff;box-shadow:var(--sh-btn)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(107,47,179,.36)}
-  .btn-ghost{background:#fff;color:var(--morado);border:2px solid var(--line-2)}
-  .btn-ghost:hover{border-color:var(--morado);transform:translateY(-2px)}
+  .btn{padding:14px 28px;border-radius:10px;font-weight:600;font-size:15px;letter-spacing:-.01em;text-decoration:none;transition:transform .2s var(--ease),box-shadow .25s,background .2s,border-color .2s;display:inline-flex;align-items:center;justify-content:center;min-height:50px}
+  .btn-primary{background:var(--morado);color:#fff;box-shadow:0 1px 2px rgba(74,30,126,.2)}
+  .btn-primary:hover{background:var(--morado-osc);transform:translateY(-1px);box-shadow:0 6px 18px rgba(74,30,126,.22)}
+  .btn-ghost{background:#fff;color:var(--morado);border:1.5px solid var(--line-2)}
+  .btn-ghost:hover{border-color:var(--morado);background:var(--lila)}
   .scarcity{margin-top:18px;font-size:14px;color:var(--rojo);font-weight:600}
   .trust{display:flex;align-items:center;gap:14px;margin-top:28px;flex-wrap:wrap}
   .trust .dots{display:flex}
@@ -219,7 +219,7 @@
   .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
   .pain-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;box-shadow:var(--sh-sm);transition:transform .25s var(--ease),box-shadow .25s}
   .pain-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
-  .pain-card .emo{font-size:26px;margin-bottom:12px;display:block}
+  .pain-ico{width:30px;height:30px;color:var(--morado);margin-bottom:16px;display:block;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
   .pain-card h3{font-size:17px;font-weight:700;margin-bottom:6px}
   .pain-card p{font-size:14px;color:var(--gris)}
 
@@ -245,8 +245,9 @@
   .gallery{padding:var(--section) 0}
   .gallery h2{font-size:clamp(28px,4.5vw,42px);font-weight:800;text-align:center;margin-bottom:12px}
   .gallery .lead{text-align:center;color:var(--gris);margin-bottom:36px;font-size:clamp(16px,2vw,18px)}
-  .block-label{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--morado);margin:40px 0 20px}
-  .block-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--line-2),transparent)}
+  .block-label{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--tinta);margin:44px 0 20px}
+  .block-label b{color:var(--morado);font-weight:800;font-variant-numeric:tabular-nums}
+  .block-label::after{content:'';flex:1;height:1px;background:var(--line)}
   .gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
   .gal-4{grid-template-columns:repeat(4,1fr)}
   .gal-3{grid-template-columns:repeat(3,1fr)}
@@ -282,7 +283,8 @@
   .plan.feat{border-color:var(--morado);box-shadow:var(--sh-lg)}
   @media(min-width:781px){.plan.feat{transform:scale(1.03)}.plan.feat:hover{transform:scale(1.03) translateY(-4px)}}
   .plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--morado);color:#fff;font-size:12px;font-weight:700;padding:6px 16px;border-radius:var(--r-full);white-space:nowrap;box-shadow:0 6px 16px rgba(107,47,179,.35)}
-  .plan-ico{font-size:42px;line-height:1;margin-bottom:12px;display:block}
+  .plan .eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--morado-claro);margin-bottom:10px}
+  .plan.feat .eyebrow{color:var(--morado)}
   .plan .pname{font-size:21px;font-weight:800;color:var(--tinta);letter-spacing:-.01em;margin-bottom:3px}
   .plan .ptag{font-size:13px;color:var(--gris);margin-bottom:18px}
   .plan .price{font-size:40px;font-weight:800;margin-bottom:2px}
@@ -291,7 +293,7 @@
   .plan ul{list-style:none;margin-bottom:24px;flex:1}
   .plan li{display:flex;gap:10px;padding:9px 0;font-size:14px;border-bottom:1px solid var(--line)}
   .plan li:last-child{border:none}
-  .plan li .ck{color:var(--morado);font-weight:800;flex-shrink:0}
+  .plan li .ck{width:16px;height:16px;flex-shrink:0;margin-top:3px;color:var(--morado);stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
   .plan .btn{width:100%}
 
   /* DIFERENCIAL */
@@ -301,7 +303,8 @@
   .diff-box h2{font-size:clamp(26px,4vw,36px);font-weight:800;margin-bottom:14px}
   .diff-box h2 .hl{color:var(--morado)}
   .diff-box p{color:var(--gris);font-size:clamp(15px,2vw,16px)}
-  .diff-emoji{font-size:clamp(56px,10vw,80px);text-align:center;flex:0 0 auto}
+  .diff-visual{flex:0 0 auto}
+  .diff-ico{width:clamp(80px,13vw,116px);height:auto;color:var(--morado);stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 
   /* FAQ */
   .faq{padding:var(--section) 0;max-width:760px;margin:0 auto}
@@ -362,7 +365,7 @@
         <a href="#planes" class="btn btn-primary">Quiero enganchar a mi audiencia</a>
         <a href="#como" class="btn btn-ghost">Ver cómo funciona</a>
       </div>
-      <p class="scarcity" data-reveal>⚡ Plan fundador: 20% off de por vida — solo para los primeros 3</p>
+      <p class="scarcity" data-reveal>Plan fundador: 20% off de por vida, solo para los primeros 3.</p>
     </div>
     <div class="pack-stage" data-reveal>
       <div class="ziploc">
@@ -385,16 +388,28 @@
   <h2 data-reveal>¿Te suena familiar?</h2>
   <p class="lead" data-reveal>Tienes una marca buenísima, pero el contenido siempre queda para último.</p>
   <div class="pain-grid">
-    <div class="pain-card" data-reveal><span class="emo">😩</span><h3>No sé qué publicar</h3><p>Abres Instagram, miras la pantalla en blanco y la cierras. Otra vez.</p></div>
-    <div class="pain-card" data-reveal><span class="emo">⏰</span><h3>No tengo tiempo</h3><p>Entre vender, atender y la vida, crear contenido nunca entra en la agenda.</p></div>
-    <div class="pain-card" data-reveal><span class="emo">🎲</span><h3>Mi feed se ve improvisado</h3><p>Cada post parece de una marca distinta. No hay línea ni constancia.</p></div>
-    <div class="pain-card" data-reveal><span class="emo">💸</span><h3>Una agencia es carísima</h3><p>Y armar tu propio equipo, ni hablar. Esto es otra cosa: un servicio por suscripción.</p></div>
+    <div class="pain-card" data-reveal>
+      <svg class="pain-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 01-10.8 6.7L4 20l1.4-4.7A7.5 7.5 0 1120 11.5z"/><circle cx="9" cy="11.5" r=".75" fill="currentColor" stroke="none"/><circle cx="12" cy="11.5" r=".75" fill="currentColor" stroke="none"/><circle cx="15" cy="11.5" r=".75" fill="currentColor" stroke="none"/></svg>
+      <h3>No sé qué publicar</h3><p>Abres Instagram, miras la pantalla en blanco y la cierras. Otra vez.</p>
+    </div>
+    <div class="pain-card" data-reveal>
+      <svg class="pain-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      <h3>No tengo tiempo</h3><p>Entre vender, atender y la vida, crear contenido nunca entra en la agenda.</p>
+    </div>
+    <div class="pain-card" data-reveal>
+      <svg class="pain-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="7.5" height="7" rx="1.6"/><rect x="14" y="6.5" width="6.5" height="6.5" rx="1.6"/><rect x="4.5" y="14.5" width="7" height="5.5" rx="1.6"/></svg>
+      <h3>Mi feed se ve improvisado</h3><p>Cada post parece de una marca distinta. No hay línea ni constancia.</p>
+    </div>
+    <div class="pain-card" data-reveal>
+      <svg class="pain-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.3l-7.2 7.2a2 2 0 01-2.8 0l-6.5-6.5a2 2 0 01-.6-1.4V5.4a2 2 0 012-2h7.2a2 2 0 011.4.6l6.5 6.5a2 2 0 010 2.8z"/><circle cx="8" cy="8" r="1.3"/></svg>
+      <h3>Una agencia es carísima</h3><p>Y armar tu propio equipo, ni hablar. Esto es otra cosa: un servicio por suscripción.</p>
+    </div>
   </div>
 </section>
 
 <section class="how" id="como">
   <div class="how-in">
-    <h2 data-reveal>Así de fácil funciona 🎣</h2>
+    <h2 data-reveal>Así de fácil funciona</h2>
     <div class="steps">
       <div class="step" data-reveal><div class="num">1</div><h3>Llenas el brief</h3><p>Una sola vez. Nos cuentas tu marca, tu tono y de qué quieres hablar.</p></div>
       <div class="step" data-reveal><div class="num">2</div><h3>Creamos tu pack</h3><p>Carruseles con tu identidad + tu avatar con IA + captions listos.</p></div>
@@ -406,17 +421,17 @@
 
 <section class="mani wrap">
   <div class="mani-box" data-reveal>
-    <div class="kick">🚫 No somos una agencia</div>
+    <div class="kick">No somos una agencia</div>
     <h2>Rompemos el esquema de las agencias.<br><span class="hl">Pero de contenido, sabemos un montón.</span></h2>
     <p>Sin reuniones eternas, sin cobros ocultos, sin presupuestos de mil páginas. Solo contenido que engancha, hecho con IA y entregado cada mes. Tú apruebas, nosotros producimos.</p>
   </div>
 </section>
 
 <section class="gallery wrap">
-  <h2 data-reveal>Mira lo que vas a recibir 🎣</h2>
+  <h2 data-reveal>Mira lo que vas a recibir</h2>
   <p class="lead" data-reveal>Contenido scroll-stopper para cualquier rubro — carruseles que enganchan y reels que detienen el pulgar.</p>
 
-  <div class="block-label" data-reveal>🎠 Tu carrusel del mes</div>
+  <div class="block-label" data-reveal><b>01</b> Carrusel del mes</div>
   <div class="gal-grid gal-4">
     <img src="ejemplos/ej1.jpg" alt="Carrusel El Hook — Las medidas importan (Nueva York)" loading="lazy" data-reveal />
     <img src="ejemplos/ej4.jpg" alt="Carrusel El Hook — Tu asesor de imagen con IA" loading="lazy" data-reveal />
@@ -424,18 +439,18 @@
     <img src="videos/higgsfield/products/prod_makeup.webp" alt="Producto en escena — beauty / skincare" loading="lazy" data-reveal />
   </div>
 
-  <div class="block-label" data-reveal>✨ Tu avatar en video y foto</div>
+  <div class="block-label" data-reveal><b>02</b> Avatar en video y foto</div>
   <div class="gal-grid reel-2">
     <div class="reel" data-reveal>
       <video src="videos/higgsfield/peruano.mp4" poster="videos/higgsfield/peruano.jpg" muted loop autoplay playsinline preload="metadata" aria-label="Avatar UGC reseñando un producto a cámara"></video>
       <div class="veil"></div>
-      <div class="ai-badge">✨ 100% IA</div>
+      <div class="ai-badge">Generado con IA</div>
       <div class="cap">Reseña tu producto a cámara<small>Avatar UGC</small></div>
     </div>
     <div class="reel" data-reveal>
       <video src="videos/higgsfield/ugc_model1.mp4" poster="videos/higgsfield/ugc_model1.jpg" muted loop autoplay playsinline preload="metadata" aria-label="Avatar modelando una marca"></video>
       <div class="veil"></div>
-      <div class="ai-badge">✨ 100% IA</div>
+      <div class="ai-badge">Generado con IA</div>
       <div class="cap">Modelando tu marca<small>Avatar try-on</small></div>
     </div>
   </div>
@@ -446,7 +461,7 @@
     <img src="realismo/cabello.webp" alt="Avatar realista — detalle de cabello" loading="lazy" data-reveal />
   </div>
 
-  <div class="block-label" data-reveal>📸 Photoshoot de producto</div>
+  <div class="block-label" data-reveal><b>03</b> Photoshoot de producto</div>
   <p class="lead" style="margin:-6px 0 24px;font-size:15px" data-reveal>Tu outfit como campaña — el producto solo + tu avatar modelándolo en varias poses. Sin estudio, sin sesión de fotos.</p>
   <div class="gal-grid gal-4">
     <img src="photoshoot/outfit.webp" alt="Photoshoot de producto — outfit flat lay" loading="lazy" data-reveal />
@@ -498,7 +513,7 @@
         <text x="130" y="280" font-family="Inter, sans-serif" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">contenido del mes</text>
       </svg>
       <div class="pack-copy" data-reveal>
-        <div class="kick">📦 El Hook Pack</div>
+        <div class="kick">El Hook Pack</div>
         <h2>Elige tu <span class="hl">Hook Pack</span></h2>
         <p class="lead">Todo tu contenido del mes empaquetado y listo — en todas las medidas que necesitas. Suscripción mensual, cancelas cuando quieras, sin amarres.</p>
       </div>
@@ -506,50 +521,50 @@
     <div class="plan-grid">
 
       <div class="plan" data-reveal>
-        <div class="plan-ico">⚡</div>
+        <div class="eyebrow">Esencial</div>
         <div class="pname">Pack Impacto</div>
         <div class="ptag">Para arrancar con fuerza</div>
         <div class="price">S/ 1.490<small>/mes</small></div>
         <div class="founder">Fundador: S/ 1.190/mes</div>
         <ul>
-          <li><span class="ck">✓</span> 4 carruseles al mes</li>
-          <li><span class="ck">✓</span> 1 avatar con IA</li>
-          <li><span class="ck">✓</span> 1 reel</li>
-          <li><span class="ck">✓</span> Copys listos para publicar</li>
-          <li><span class="ck">✓</span> Grilla de contenido</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>4 carruseles al mes</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>1 avatar con IA</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>1 reel</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Copys listos para publicar</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Grilla de contenido</li>
         </ul>
         <a href="#contacto" class="btn btn-ghost">Empezar</a>
       </div>
 
       <div class="plan feat" data-reveal>
-        <div class="tag">⭐ El más pedido</div>
-        <div class="plan-ico">🚀</div>
+        <div class="tag">El más pedido</div>
+        <div class="eyebrow">Recomendado</div>
         <div class="pname">Pack Viral</div>
         <div class="ptag">El que todos quieren</div>
         <div class="price">S/ 2.490<small>/mes</small></div>
         <div class="founder">Fundador: S/ 1.990/mes</div>
         <ul>
-          <li><span class="ck">✓</span> 7 carruseles al mes</li>
-          <li><span class="ck">✓</span> 2 reels</li>
-          <li><span class="ck">✓</span> 1 avatar con IA</li>
-          <li><span class="ck">✓</span> Copys listos para publicar</li>
-          <li><span class="ck">✓</span> Grilla de contenido</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>7 carruseles al mes</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>2 reels</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>1 avatar con IA</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Copys listos para publicar</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Grilla de contenido</li>
         </ul>
         <a href="#contacto" class="btn btn-primary">Quiero este</a>
       </div>
 
       <div class="plan" data-reveal>
-        <div class="plan-ico">👑</div>
+        <div class="eyebrow">Premium</div>
         <div class="pname">Pack Imperio</div>
         <div class="ptag">Todo, sin límites</div>
         <div class="price">S/ 3.900<small>/mes</small></div>
         <div class="founder">Fundador: S/ 3.120/mes</div>
         <ul>
-          <li><span class="ck">✓</span> 12 carruseles al mes</li>
-          <li><span class="ck">✓</span> 3 reels</li>
-          <li><span class="ck">✓</span> 2 avatares con IA</li>
-          <li><span class="ck">✓</span> Copys listos para publicar</li>
-          <li><span class="ck">✓</span> Grilla de contenido</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>12 carruseles al mes</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>3 reels</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>2 avatares con IA</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Copys listos para publicar</li>
+          <li><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Grilla de contenido</li>
         </ul>
         <a href="#contacto" class="btn btn-ghost">Ir con todo</a>
       </div>
@@ -564,7 +579,9 @@
       <h2>Lo que <span class="hl">nadie más te da</span>: tu avatar con IA</h2>
       <p>Contenido con tu cara (o tu personaje) sin grabar, sin estudio, sin maquillarte. Apareces consistente en cada post, aunque no tengas tiempo de prender la cámara. Ese es el diferencial de El Hook.</p>
     </div>
-    <div class="diff-emoji" aria-hidden="true">🤳✨</div>
+    <div class="diff-visual" aria-hidden="true">
+      <svg class="diff-ico" viewBox="0 0 24 24"><rect x="3" y="2.5" width="18" height="19" rx="2.5"/><circle cx="12" cy="9.5" r="3.2"/><path d="M6.4 19a5.7 5.7 0 0111.2 0"/></svg>
+    </div>
   </div>
 </section>
 
@@ -582,10 +599,10 @@
 <section class="final" id="contacto">
   <div class="wrap">
     <div class="final-box" data-reveal>
-      <h2>Engancha a tu audiencia este mes 🎣</h2>
+      <h2>Engancha a tu audiencia este mes</h2>
       <p>Quedan 3 cupos de plan fundador con 20% off de por vida. Cuando se llenan, el precio sube.</p>
       <a href="https://wa.me/51987272440?text=Hola%20quiero%20mi%20cupo%20de%20plan%20fundador%20de%20El%20Hook" class="btn btn-primary" rel="noopener">Reservar mi cupo por WhatsApp</a>
-      <p class="scarcity">⚡ Solo 3 disponibles</p>
+      <p class="scarcity">Solo 3 cupos disponibles.</p>
     </div>
   </div>
 </section>
@@ -602,7 +619,8 @@
     </svg>
     El Hook <span>by iAddict</span>
   </div>
-  <p>Contenido que engancha · Hecho con IA, con tu marca 💜</p>
+  <p>Contenido que engancha, hecho con IA — con tu marca.</p>
+  <p style="margin-top:10px;font-size:13px;opacity:.8">© 2026 El Hook · by iAddict — Lima, Perú</p>
 </footer>
 
 <script>

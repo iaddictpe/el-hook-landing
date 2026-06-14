@@ -157,8 +157,13 @@
 
   /* HERO */
   .hero{padding:clamp(36px,6vw,60px) 0 var(--section);position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:url('bg-mesh.webp') center top/cover no-repeat;opacity:.85;-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 92%);mask-image:linear-gradient(180deg,#000 50%,transparent 92%)}
+  .hero::before{content:'';position:absolute;inset:-2%;z-index:0;pointer-events:none;background:url('bg-mesh.webp') center top/cover no-repeat;opacity:.9;-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 92%);mask-image:linear-gradient(180deg,#000 50%,transparent 92%);transform-origin:60% 30%;animation:heroDrift 26s ease-in-out infinite alternate}
+  .hero::after{content:'';position:absolute;top:-18%;right:2%;width:48%;height:78%;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(165,110,224,.30),transparent 64%);filter:blur(34px);animation:heroGlow 15s ease-in-out infinite alternate}
   .hero>.wrap{position:relative;z-index:1}
+  @keyframes heroDrift{from{transform:scale(1.06)}to{transform:scale(1.16) translate(-1.6%,1.4%)}}
+  @keyframes heroGlow{from{transform:translate(0,0) scale(1);opacity:.65}to{transform:translate(-7%,5%) scale(1.18);opacity:1}}
+  .pack-stage .ziploc{animation:floatBag 7s ease-in-out infinite}
+  @keyframes floatBag{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
   .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,56px);align-items:center}
   .hero-copy{text-align:left}
   .badge{display:inline-flex;align-items:center;gap:8px;background:var(--lila);color:var(--morado);font-weight:600;font-size:13px;padding:8px 16px;border-radius:var(--r-full);margin-bottom:22px}

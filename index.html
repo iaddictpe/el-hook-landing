@@ -157,11 +157,10 @@
 
   /* HERO */
   .hero{padding:clamp(36px,6vw,60px) 0 var(--section);position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:-2%;z-index:0;pointer-events:none;background:url('bg-mesh.webp') center top/cover no-repeat;opacity:.9;-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 92%);mask-image:linear-gradient(180deg,#000 50%,transparent 92%);transform-origin:60% 30%;animation:heroDrift 26s ease-in-out infinite alternate}
-  .hero::after{content:'';position:absolute;top:-18%;right:2%;width:48%;height:78%;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(165,110,224,.30),transparent 64%);filter:blur(34px);animation:heroGlow 15s ease-in-out infinite alternate}
-  .hero>.wrap{position:relative;z-index:1}
-  @keyframes heroDrift{from{transform:scale(1.06)}to{transform:scale(1.16) translate(-1.6%,1.4%)}}
-  @keyframes heroGlow{from{transform:translate(0,0) scale(1);opacity:.65}to{transform:translate(-7%,5%) scale(1.18);opacity:1}}
+  .hero-bg{position:absolute;inset:-2%;width:104%;height:104%;object-fit:cover;z-index:0;pointer-events:none;opacity:.92;-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 92%);mask-image:linear-gradient(180deg,#000 50%,transparent 92%)}
+  .hero::after{content:'';position:absolute;top:-18%;right:2%;width:48%;height:78%;z-index:1;pointer-events:none;background:radial-gradient(circle,rgba(165,110,224,.28),transparent 64%);filter:blur(34px);animation:heroGlow 15s ease-in-out infinite alternate}
+  .hero>.wrap{position:relative;z-index:2}
+  @keyframes heroGlow{from{transform:translate(0,0) scale(1);opacity:.6}to{transform:translate(-7%,5%) scale(1.18);opacity:.95}}
   .pack-stage .ziploc{animation:floatBag 7s ease-in-out infinite}
   @keyframes floatBag{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
   .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,56px);align-items:center}
@@ -370,6 +369,10 @@
 </nav>
 
 <header class="hero" id="top">
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="bg-mesh.webp" aria-hidden="true">
+    <source src="herobg.webm" type="video/webm" />
+    <source src="herobg.mp4" type="video/mp4" />
+  </video>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="badge" data-reveal><span class="dot"></span> Solo 3 cupos de plan fundador abiertos</div>
@@ -645,6 +648,7 @@
 
   // Scroll reveal con entrada escalonada (stagger)
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { var hv = document.querySelector('.hero-bg'); if (hv) { hv.removeAttribute('autoplay'); try { hv.pause(); } catch(e){} } }
   var els = document.querySelectorAll('[data-reveal]');
   if (reduce || !('IntersectionObserver' in window)) {
     els.forEach(function(el){ el.classList.add('in'); });

@@ -2,7 +2,7 @@
 
 Landing page de **El Hook**, el servicio de contenido por suscripción de iAddict: carruseles, reels, captions y avatares en IA listos para publicar cada mes.
 
-🔗 **Producción:** https://el-hook-landing.vercel.app
+🔗 **Producción:** https://hookpe.com
 
 ## Stack
 

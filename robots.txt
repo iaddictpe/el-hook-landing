@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://el-hook-landing.vercel.app/sitemap.xml
+Sitemap: https://hookpe.com/sitemap.xml
